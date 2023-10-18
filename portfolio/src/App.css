@@ -13,7 +13,9 @@
     animation: App-logo-spin infinite 10s linear;
   }
 }
-
+.App-body {
+  background-color: lightblue;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,6 +29,43 @@
 
 .App-link {
   color: #61dafb;
+}
+
+/* Navbar.css */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu li {
+  padding: 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #007bff; /* Change the color on hover */
 }
 
 @keyframes App-logo-spin {

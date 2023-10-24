@@ -1,21 +1,23 @@
 .App {
   text-align: center;
-  background-color: #61dafb;
+  position: relative;
+  background-color: rgb(199, 222, 230);
 }
 
-.App-logo {
+/* .App-logo {
   height: 69vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 10s linear;
   }
-}
-.App-body {
-  background-color: lightblue;
-}
+} */
+/* .App-body {
+  background-color: rgb(199, 222, 230);
+
+} */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,46 +30,37 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #a4dded;
 }
 
 /* Navbar.css */
 
-.navbar {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
+.navbar{
+  background-color: #a4dded;
+  color: rgb(231, 133, 133);
+  text-align: center;
+  padding: 10px;
 
-.navbar-logo {
-  font-size: 24px;
-  font-weight: bold;
 }
-
-.navbar-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar-menu li {
+.nav-list {
+  list-style-type: none;
+  margin: 0;
   padding: 0;
+  display: inline-block; /* Make the list items display inline */
+  width: 100%; /* Ensure the list items span the full width */
 }
 
-.navbar-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: color 0.3s;
-}
+
 
 .navbar-menu a:hover {
   color: #007bff; /* Change the color on hover */
 }
 
+.nav-item{
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

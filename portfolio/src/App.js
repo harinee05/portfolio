@@ -1,18 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './NavBar';
+import { useState } from "react";
+
 function App() {
+  const [showAbout, setShowAbout] = useState(false);
+
+  const handleAboutClick = () => {
+    // Toggle the value of showAbout
+    setShowAbout(!showAbout);
+  };
+
   return (
     <div className="App">
       <Navbar /> 
-      <body className='App-body'>
-        <img src={logo} className="App-logo" alt="logo" />
+      <div className='App-body'>
         
-      </body>
+        <button onClick={handleAboutClick}>
+          {showAbout ? "Hide About" : "Show About"}
+        </button>
+        {showAbout && (
+          <div className="about-section">
+            <h2>About Me</h2>
+            <p>This is information about me.</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
-
-
 
 export default App;

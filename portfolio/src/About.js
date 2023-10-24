@@ -13,7 +13,7 @@ function About() {
     if (showAbout && currentSentence < sentences.length) {
       timer = setTimeout(() => {
         setText(prevText => "Hey! I am " + sentences[currentSentence].substring(0, prevText.length + 1));
-      }, 500);
+      }, 1000);
     } else {
       setCurrentSentence(0);
       setText('');
@@ -23,7 +23,7 @@ function About() {
   }, [showAbout, text, currentSentence, sentences]);
 
   useEffect(() => {
-    if (text === "I am " + sentences[currentSentence]) {
+    if (text === "Hey! I am " + sentences[currentSentence]) {
       const nextSentence = (currentSentence + 1) % sentences.length;
       setCurrentSentence(nextSentence);
     }
@@ -32,10 +32,11 @@ function About() {
   return (
     <div>
       <button onClick={() => setShowAbout(!showAbout)}>
-        {showAbout ? 'Neh! Imma find it later!' : 'Introduction'}
+        {showAbout ? 'Neh not now, later!' : 'Introduction'}
       </button>
       {showAbout && (
         <div>
+          <h2>Introduction</h2>
           <p>{text}</p>
         </div>
       )}
